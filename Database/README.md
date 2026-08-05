@@ -1,20 +1,57 @@
-# Heart disease 
-# project description
-This project aims to analyze medical data to address the challenge of identifying patients at risk of heart disease. Using multiple clinical attributes, the project applies classification techniques to categorize patients into defined risk groups.
+# Tuwaiq Academy — Student Information & Academic Management System
 
-In addition, clustering methods are used to group patients with similar characteristics, helping to uncover hidden patterns and common patient profiles within the data. By combining these approaches, the project provides meaningful insights that support early detection and improve data-driven decision making in healthcare.
+An integrated database application designed for **Tuwaiq Academy** to streamline student administrative and academic tracking. The system manages core institutional operations—including student records, course offerings, grade recording, attendance tracking, and class scheduling—providing a structured data foundation to improve administrative efficiency and academic monitoring.
 
-# Motivation 
 
-We chose this topic (predicting heart diseases) because it addresses a major health issue affecting many lives. By using classification techniques and clustering methods, we can enhance early diagnosis and provide effective preventive solutions. Analyzing multiple medical data points helps in accurately predicting the risk of heart diseases, assisting doctors in making quicker and more precise treatment decisions. This project aligns with modern trends in medicine and provides a practical application to improve healthcare. It also promotes the use of technology to offer innovative solutions in diagnosing and treating heart diseases.
+## 📌 Project Overview
 
-# Student names
-Rose Alatawi 445203025
+Managing student lifecycles and tracking academic progress manually can lead to data fragmentation and operational bottlenecks. This project provides a centralized, relational database application designed to automate and unify academic tracking for Tuwaiq Academy.
 
-Rahaf Aldameqh 445202198
+### Key Objectives
 
-Qmash Alzabin 445201240
+* **Centralize Data:** Standardize records for students, instructors, courses, and cohorts.
+* **Track Attendance & Grades:** Provide real-time data entry and queries for attendance logs and assessment scores.
+* **Manage Schedules:** Prevent timetable overlaps for instructors, classrooms, and student groups.
+* **Simplify Reporting:** Enable quick reporting on student performance, attendance rates, and enrollment metrics.
 
-Ghadi Altamimi 445200298
 
-Lina Alodhibi 445203108
+## ✨ Features
+
+* **Student Profile Management:** Tracks enrollment status, contact details, academic paths, and progress updates.
+* **Course & Cohort Registration:** Handles course prerequisite mapping, batch/cohort assignments, and seat limits.
+* **Attendance Tracking System:** Logs daily/session attendance status (Present, Late, Absent, Excused) with summary aggregations.
+* **Gradebook & Performance Analytics:** Records assignments, quizzes, midterms, and final project grades to calculate total performance.
+* **Dynamic Scheduling:** Organizes course tracks, room assignments, and lecture times across active academy bootcamps.
+
+
+## 🛠️ Tech Stack & Database Architecture
+
+* **Database / RDBMS:** PostgreSQL / MySQL / SQLite
+* **Backend Framework:** *[e.g., Python (FastAPI / Django) / Node.js (Express) / Java (Spring Boot)]*
+* **ORM / Database Access:** *[e.g., SQLAlchemy / Prisma / Hibernate]*
+* **Frontend Interface:** *[e.g., React / Next.js / Streamlit / HTML5 & Bootstrap]*
+
+
+## 🗄️ Relational Schema (ERD Overview)
+
+```text
+  ┌──────────────┐       ┌─────────────────┐       ┌──────────────┐
+  │   Students   │───<   │   Enrollments   │   >───│   Courses    │
+  └──────────────┘       └─────────────────┘       └──────────────┘
+         │                         │                      │
+         │                         │                      │
+         ▼                         ▼                      ▼
+  ┌──────────────┐       ┌─────────────────┐       ┌──────────────┐
+  │  Attendance  │       │     Grades      │       │  Schedules   │
+  └──────────────┘       └─────────────────┘       └──────────────┘
+
+```
+
+### Core Entities & Relationships
+
+* **Students:** Primary user data (ID, name, email, track, enrollment date).
+* **Courses / Bootcamps:** Course details, instructor mappings, and credit/hour breakdowns.
+* **Enrollments:** Junction table managing many-to-many relationships between Students and Courses.
+* **Attendance:** Daily transactional records linked to student IDs and specific course sessions.
+* **Grades:** Detailed logs of raw scores, weighted percentages, and assessment categories.
+* **Schedules:** Timetable details specifying day, time slots, instructors, and physical/virtual rooms.
