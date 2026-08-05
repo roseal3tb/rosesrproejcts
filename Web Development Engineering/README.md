@@ -1,20 +1,18 @@
-# Heart disease 
-# project description
-This project aims to analyze medical data to address the challenge of identifying patients at risk of heart disease. Using multiple clinical attributes, the project applies classification techniques to categorize patients into defined risk groups.
+# Murabba
+Murabba is a modern, responsive front-end web application crafted to deliver an interactive and visually dynamic user experience. Built with foundational web technologies—HTML, CSS, and JavaScript—this project emphasizes clean design, intuitive navigation, and smooth user interactions while showcasing creative front-end architecture.
 
-In addition, clustering methods are used to group patients with similar characteristics, helping to uncover hidden patterns and common patient profiles within the data. By combining these approaches, the project provides meaningful insights that support early detection and improve data-driven decision making in healthcare.
+# ✨ Features
+Responsive Design: Optimized layout that adapts seamlessly across desktops, tablets, and mobile devices.
 
-# Motivation 
+Interactive UI Elements: Dynamic interactions powered by vanilla JavaScript for an engaging user experience.
 
-We chose this topic (predicting heart diseases) because it addresses a major health issue affecting many lives. By using classification techniques and clustering methods, we can enhance early diagnosis and provide effective preventive solutions. Analyzing multiple medical data points helps in accurately predicting the risk of heart diseases, assisting doctors in making quicker and more precise treatment decisions. This project aligns with modern trends in medicine and provides a practical application to improve healthcare. It also promotes the use of technology to offer innovative solutions in diagnosing and treating heart diseases.
+Clean & Modern Aesthetic: Visual design structured with modern CSS standards and fluid layouts.
 
-# Student names
-Rose Alatawi 445203025
+Fast & Lightweight: Built without heavy external framework dependencies for minimal load times.
 
-Rahaf Aldameqh 445202198
+# 🛠️ Tech Stack
+Structure: HTML5
 
-Qmash Alzabin 445201240
+Styling: CSS3 (Flexbox, CSS Grid, Custom Variables, Animations)
 
-Ghadi Altamimi 445200298
-
-Lina Alodhibi 445203108
+Interactivity: JavaScript (ES6+)
