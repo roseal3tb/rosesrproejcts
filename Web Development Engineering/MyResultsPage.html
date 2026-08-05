@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مربع · نتائجي</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .results-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .results-table th {
+            background: #0a2647;
+            color: white;
+            padding: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .results-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .results-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .results-table tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .best-score {
+            background: #eaf3fd;
+            font-weight: bold;
+            color: #0a2647;
+        }
+        
+        .score-badge {
+            background: #f3b33d;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        .none-badge {
+            background: #ddd;
+            padding: 5px 15px;
+            border-radius: 20px;
+            color: #666;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            background: #f3b33d;
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        
+        .back-btn:hover {
+            background: #e0a02d;
+        }
+        
+        .summary-cards {
+            display: flex;
+            gap: 20px;
+            justify-content: space-around;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .summary-card {
+            background: #eaf3fd;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .summary-card h3 {
+            color: #0a2647;
+            margin-bottom: 10px;
+        }
+        
+        .summary-card .number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #f3b33d;
+        }
+    </style>
+</head>
+<body>
+<div class="page-prototype">
+
+    <!-- الهيدر -->
+    <div class="navbar">
+        <div class="nav-right">
+            <a href="HomePage.HTML"><img src="images/right-logo.png" alt="مربع" class="header-logo-right"></a>
+            <a href="HomePage.HTML">الرئيسية</a>
+            <a href="CoursePage.HTML">المجتمعات</a>
+            <a href="MurabaiPage.html">مربعي</a>
+            <a href="AboutUsPage.HTML">من نحن</a>
+            <a href="ContactUsPage.HTML">تواصل معنا</a>
+        </div>
+        <div class="nav-left"><img src="images/left-logo.png" alt="Logo" class="header-logo-left"></div>
+    </div>
+
+    <!-- المحتوى -->
+    <div class="content">
+        <!-- Breadcrumbs -->
+        <div style="font-size:0.9rem; color:gray; margin-bottom:20px;">
+            <a href="HomePage.HTML" style="text-decoration:none; color:gray;">الرئيسية</a> &gt;
+            <a href="MurabaiPage.html" style="text-decoration:none; color:gray;">مربعي</a> &gt;
+            <span>نتائجي</span>
+        </div>
+
+        <h1 style="font-size:2.5rem; margin-bottom:20px;">نتائج اختباراتي</h1>
+
+        <div class="results-container">
+            <!-- بطاقات ملخصة -->
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <h3>الدروس المكتملة</h3>
+                    <div class="number">4</div>
+                </div>
+                <div class="summary-card">
+                    <h3>المعدل العام</h3>
+                    <div class="number">88%</div>
+                </div>
+                <div class="summary-card">
+                    <h3>أفضل نتيجة</h3>
+                    <div class="number">95</div>
+                </div>
+            </div>
+
+            <!-- جدول النتائج -->
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>الدرس</th>
+                        <th>الدرجة</th>
+                        <th>النسبة</th>
+                        <th>التاريخ</th>
+                        <th>أفضل نتيجة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>مقدمة في البرمجة</td>
+                        <td><span class="score-badge">95</span></td>
+                        <td>95%</td>
+                        <td>2026-03-10</td>
+                        <td class="best-score">95 ⭐</td>
+                    </tr>
+                    <tr>
+                        <td>ريادة الأعمال</td>
+                        <td><span class="score-badge">88</span></td>
+                        <td>88%</td>
+                        <td>2026-03-12</td>
+                        <td>92</td>
+                    </tr>
+                    <tr>
+                        <td>الكتابة الإبداعية</td>
+                        <td><span class="score-badge">78</span></td>
+                        <td>78%</td>
+                        <td>2026-03-14</td>
+                        <td>85</td>
+                    </tr>
+                    <tr>
+                        <td>أصول الفقه</td>
+                        <td><span class="score-badge">92</span></td>
+                        <td>92%</td>
+                        <td>2026-03-15</td>
+                        <td>94</td>
+                    </tr>
+                    <tr>
+                        <td>تطوير التطبيقات</td>
+                        <td><span class="none-badge">لم يحضر</span></td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>التفسير الموضوعي</td>
+                        <td><span class="none-badge">لم يحضر</span></td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- زر العودة لمربعي -->
+            <div style="text-align: center;">
+                <a href="MurabaiPage.html" class="back-btn">← العودة لمربعي</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <div class="custom-footer">
+       <div class="footer-col">
+    <h4>حساباتنا</h4>
+    <ul class="bullet-list social-links">
+        <li><img src="images/snapchat.PNG"> murabba3</li>
+        <li><img src="images/x.PNG"> murabba3</li>
+        <li><img src="images/instagram.JPG"> murabba3</li>
+    </ul>
+</div>
+        <div class="logo-placeholder">
+            <img src="images/footer.png">
+        </div>
+        <div class="footer-col">
+            <h4>تواصل معنا</h4>
+            <ul class="bullet-list">
+                <li>📧 info@murabba3.com</li>
+                <li>📞 +966 50 123 4567</li>
+                <li>📍 الرياض، السعودية</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        Copyright © 2026 مربع. جميع الحقوق محفوظة
+    </div>
+
+</div>
+</body>
+</html>

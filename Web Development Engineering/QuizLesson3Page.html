@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مربع · اختبار أساسيات الشعر العربي</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .content {
+            min-height: 500px;
+            padding: 40px 50px;
+            background-color: #f9f9f9;
+        }
+
+        .quiz-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #eaf3fd;
+            padding: 2.5rem;
+            border-radius: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .question {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .question h3 {
+            margin-bottom: 15px;
+            color: #0a2647;
+            font-size: 1.2rem;
+        }
+
+        .question p {
+            margin-bottom: 12px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .option {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .option input {
+            width: 18px;
+            height: 18px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn, .submit-btn {
+            padding: 12px 30px;
+            background: #f3b33d;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+            font-size: 1rem;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .submit-btn {
+            background: #0a2647;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0a2647;
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: gray;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            color: gray;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            .quiz-container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-prototype">
+
+    <!-- الهيدر مطابق للهوم بيج -->
+    <div class="navbar">
+        <div class="nav-right">
+            <a href="HomePage.HTML">
+                <img src="images/right-logo.png" alt="مربع" class="header-logo-right">
+            </a>
+            <a href="HomePage.HTML">الرئيسية</a>
+            <a href="CoursePage.HTML">المجتمعات</a>
+            <a href="MurabaiPage.html">مربعي</a>
+            <a href="AboutUsPage.HTML">من نحن</a>
+            <a href="ContactUsPage.HTML">تواصل معنا</a>
+        </div>
+        <div class="nav-left">
+            <img src="images/left-logo.png" alt="Logo" class="header-logo-left">
+        </div>
+    </div>
+
+    <!-- المحتوى -->
+    <div class="content">
+        <div class="breadcrumb">
+            <a href="HomePage.HTML">الرئيسية</a> &gt;
+            <a href="CoursePage.HTML">المجتمعات</a> &gt;
+            <a href="CoursePage.HTML?community=arabic">المجتمع الأدبي</a> &gt;
+            <span>اختبار أساسيات الشعر العربي</span>
+        </div>
+
+        <h1>اختبار درس: أساسيات الشعر العربي</h1>
+
+        <div class="quiz-container">
+            <form id="quizForm">
+                <!-- السؤال الأول -->
+                <div class="question">
+                    <h3>1. أي من الأبيات التالية من نووية الفحطانية؟</h3>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1_a" value="a">
+                        <label for="q1_a">أ) لقد كانت الدعاء على امتزاج الفخار تجود والأوطان تدمي</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1_b" value="b">
+                        <label for="q1_b">ب) وما جذورت حد الله طائفة ولا تجاوز حتى يردع الرجل</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1_c" value="c">
+                        <label for="q1_c">ج) ألهم بذكرها وقد نزلت في المهم ما لو كان في الجهل غفرا</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q1" id="q1_d" value="d">
+                        <label for="q1_d">د) يا لي الصّ متى غداً أقيام الساعة موعداً</label>
+                    </div>
+                </div>
+
+                <!-- السؤال الثاني -->
+                <div class="question">
+                    <h3>2. أكمل البيت: "ريمٌ على لقاع بين البان والعلم ..."</h3>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2_a" value="a">
+                        <label for="q2_a">أ) أحل سفك دمي في الأشهر الحرم</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2_b" value="b">
+                        <label for="q2_b">ب) باسر عينيه يغذب المراشف</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2_c" value="c">
+                        <label for="q2_c">ج) فما بنك من ذكرى حبيب ومنزل</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q2" id="q2_d" value="d">
+                        <label for="q2_d">د) لا لبث الشباب يعود يوماً</label>
+                    </div>
+                </div>
+
+                <!-- السؤال الثالث -->
+                <div class="question">
+                    <h3>3. "خمسٌ وستون في أجفان إعصاري.. أما سئمتَ ارتحالاً أيُها الساري؟"<br>ما السؤال المناسب لهذا البيت؟</h3>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3_a" value="a">
+                        <label for="q3_a">أ) سؤال عن التعب وطول السفر</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3_b" value="b">
+                        <label for="q3_b">ب) سؤال عن العمر والزمن</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3_c" value="c">
+                        <label for="q3_c">ب) سؤال عن الجمال والبهاء</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="q3" id="q3_d" value="d">
+                        <label for="q3_d">د) سؤال عن المال والتجارة</label>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <a href="Lesson3Page2.html" class="nav-btn">← السابق</a>
+                    <button type="button" id="submitQuiz" class="submit-btn">إنهاء الاختبار →</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- الفوتر مطابق للهوم بيج -->
+    <div class="custom-footer">
+        <div class="footer-col">
+            <h4>حساباتنا</h4>
+            <ul class="bullet-list social-links">
+                <li><img src="images/snapchat.PNG"> murabba3</li>
+                <li><img src="images/x.PNG"> murabba3</li>
+                <li><img src="images/instagram.JPG"> murabba3</li>
+            </ul>
+        </div>
+        <div class="logo-placeholder">
+            <img src="images/footer.png">
+        </div>
+        <div class="footer-col">
+            <h4>تواصل معنا</h4>
+            <ul class="bullet-list">
+                <li>📧 info@murabba3.com</li>
+                <li>📞 +966 50 123 4567</li>
+                <li>📍 الرياض، السعودية</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        Copyright © 2026 مربع. جميع الحقوق محفوظة
+    </div>
+
+</div>
+
+<script>
+    // Correct answers for the quiz (Lesson 3 - أساسيات الشعر العربي)
+    const correctAnswers = {
+        q1: 'b',
+        q2: 'a',
+        q3: 'b'
+    };
+
+    const submitBtn = document.getElementById('submitQuiz');
+    const lessonName = 'أساسيات الشعر العربي';
+
+    submitBtn.addEventListener('click', function() {
+        // Check if all questions are answered
+        let allAnswered = true;
+        for (let i = 1; i <= 3; i++) {
+            const radios = document.getElementsByName(`q${i}`);
+            let isAnswered = false;
+            for (let j = 0; j < radios.length; j++) {
+                if (radios[j].checked) {
+                    isAnswered = true;
+                    break;
+                }
+            }
+            if (!isAnswered) {
+                allAnswered = false;
+                break;
+            }
+        }
+
+        if (!allAnswered) {
+            alert('الرجاء الإجابة على جميع الأسئلة قبل إنهاء الاختبار');
+            return;
+        }
+
+        // Calculate score
+        let score = 0;
+        for (let i = 1; i <= 3; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selected && selected.value === correctAnswers[`q${i}`]) {
+                score++;
+            }
+        }
+
+        const total = 3;
+        const percentage = (score / total) * 100;
+
+        // Store in localStorage as best score for this lesson
+        const storageKey = `bestScore_${lessonName}`;
+        let bestScore = localStorage.getItem(storageKey);
+        
+        if (bestScore === null) {
+            localStorage.setItem(storageKey, percentage);
+        } else if (percentage > parseFloat(bestScore)) {
+            localStorage.setItem(storageKey, percentage);
+        }
+
+        // Redirect to results page with score and lesson name
+        window.location.href = `MyResultsPage.html?score=${percentage}&lesson=${encodeURIComponent(lessonName)}`;
+    });
+</script>
+
+</body>
+</html>

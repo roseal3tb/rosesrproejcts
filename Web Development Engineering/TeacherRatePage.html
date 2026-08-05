@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>مربع · تقييم المعلم 1</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    .error-border {
+        border-color: #dc3545 !important;
+        border-width: 2px !important;
+    }
+    .error-message {
+        color: #dc3545;
+        font-size: 0.85rem;
+        margin-top: 5px;
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="page-prototype">
+
+<!-- الهيدر -->
+<div class="navbar">
+<div class="nav-right">
+<a href="HomePage.HTML">
+<img src="images/right-logo.png" alt="مربع" class="header-logo-right">
+</a>
+
+<a href="HomePage.HTML">الرئيسية</a>
+<a href="CoursePage.HTML">المجتمعات</a>
+<a href="MurabaiPage.html">مربعي</a>
+<a href="AboutUsPage.HTML">من نحن</a>
+<a href="ContactUsPage.HTML">تواصل معنا</a>
+</div>
+
+<div class="nav-left">
+<img src="images/left-logo.png" alt="Logo" class="header-logo-left">
+</div>
+</div>
+
+<!-- المحتوى -->
+<div class="content">
+
+<!-- Breadcrumbs فوق العنوان -->
+<div style="font-size:0.9rem; color:gray; margin-bottom:10px;">
+  <a href="HomePage.HTML" style="text-decoration:none; color:gray;">الرئيسية</a> &gt; 
+  <a href="MurabaiPage.html" style="text-decoration:none; color:gray;">مربعي</a> &gt; 
+  <a href="TeacherEvaluationPage.HTML" style="text-decoration:none; color:gray;">تقييم المعلمين</a> &gt; 
+  <span>تقييم المعلم 1</span>
+</div>
+
+<h1 style="font-size:2.5rem;">مربع تقييم المعلم 1</h1>
+
+<div style="background:#f9f9f9; padding:2rem; border-radius:1rem; max-width:600px; margin:2rem 0;">
+    
+    <label style="display:block; margin-bottom:1rem; font-weight:bold;">المعلم: د. نوره بن سعيد</label>
+    
+    <div style="margin-bottom:1.5rem;">
+        <span style="display:block; margin-bottom:0.5rem;">قيم (اختر عدد النجوم):</span>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;" id="ratingStars">
+            <span class="star" data-rate="1" style="font-size:2rem; cursor:pointer; color:#ddd;">★</span>
+            <span class="star" data-rate="2" style="font-size:2rem; cursor:pointer; color:#ddd;">★</span>
+            <span class="star" data-rate="3" style="font-size:2rem; cursor:pointer; color:#ddd;">★</span>
+            <span class="star" data-rate="4" style="font-size:2rem; cursor:pointer; color:#ddd;">★</span>
+            <span class="star" data-rate="5" style="font-size:2rem; cursor:pointer; color:#ddd;">★</span>
+        </div>
+        <input type="hidden" id="ratingValue" value="0">
+        <div id="ratingError" class="error-message">⚠️ الرجاء اختيار التقييم</div>
+    </div>
+    
+    <br>
+    
+    <label style="display:block; margin-bottom:0.5rem; font-weight:bold;">رأيك</label>
+    
+    <textarea id="feedback" placeholder="اكتب رأيك..." rows="5" cols="40" style="width:100%; padding:0.8rem; border-radius:0.5rem; border:1px solid #ddd; margin-bottom:1.5rem;"></textarea>
+    <div id="feedbackError" class="error-message">⚠️ الرجاء كتابة تعليقك</div>
+    
+    <br><br>
+    
+    <button id="submitBtn" style="background:#f3b33d; color:#000; border:none; padding:12px 40px; border-radius:25px; font-weight:bold; cursor:pointer; width:auto; display:inline-block;">إرسال</button>
+</div>
+
+<!-- الأزرار تحت بعض - بعرض تلقائي (على قد النص) -->
+<div style="margin:1.5rem 0 4rem auto; text-align:right; max-width:600px; display:flex; flex-direction:column; gap:1rem; align-items:flex-start;">
+    
+    <!-- زر العودة لتقييم المعلمين -->
+    <a href="TeacherEvaluationPage.HTML" style="padding:12px 40px; background:#f3b33d; border-radius:25px; color:#000; text-decoration:none; font-weight:bold; font-size:1rem; display:inline-block; width:auto;">
+    ← العودة لتقييم المعلمين
+    </a>
+    
+    <!-- زر العودة إلى مربعي -->
+    <a href="MurabaiPage.html" style="padding:12px 40px; background:#888; border-radius:25px; color:#fff; text-decoration:none; font-weight:bold; font-size:1rem; display:inline-block; width:auto;">
+    ← العودة إلى مربعي
+    </a>
+    
+</div>
+
+</div> <!-- نهاية المحتوى -->
+
+<!-- الفوتر -->
+ <div class="custom-footer">
+        <div class="footer-col">
+            <h4>حساباتنا</h4>
+            <ul class="bullet-list">
+                <li><img src="images/snapchat.PNG"> murabba3</li>
+                <li><img src="images/x.PNG"> murabba3</li>
+                <li><img src="images/instagram.JPG"> murabba3</li>
+            </ul>
+        </div>
+        <div class="logo-placeholder">
+            <img src="images/footer.png">
+        </div>
+        <div class="footer-col">
+            <h4>تواصل معنا</h4>
+            <ul class="bullet-list">
+                <li>📧 info@murabba3.com</li>
+                <li>📞 +966 50 123 4567</li>
+                <li>📍 الرياض، السعودية</li>
+            </ul>
+        </div>
+    </div>
+
+<div class="copyright">
+Copyright © 2026 Murabba3
+</div>
+
+</div> <!-- نهاية page-prototype -->
+
+<script>
+    let currentRating = 0;
+    const stars = document.querySelectorAll('.star');
+    const ratingInput = document.getElementById('ratingValue');
+    const submitBtn = document.getElementById('submitBtn');
+    const feedback = document.getElementById('feedback');
+    const ratingError = document.getElementById('ratingError');
+    const feedbackError = document.getElementById('feedbackError');
+    const teacherName = 'د. نوره بن سعيد';
+
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            currentRating = parseInt(this.dataset.rate);
+            ratingInput.value = currentRating;
+            stars.forEach((s, i) => {
+                if (i < currentRating) {
+                    s.style.color = '#f3b33d';
+                } else {
+                    s.style.color = '#ddd';
+                }
+            });
+            ratingError.style.display = 'none';
+        });
+    });
+
+    submitBtn.addEventListener('click', function() {
+        let isValid = true;
+        const feedbackText = feedback.value.trim();
+        
+        if (currentRating === 0) {
+            ratingError.style.display = 'block';
+            isValid = false;
+        } else {
+            ratingError.style.display = 'none';
+        }
+        
+        if (!feedbackText) {
+            feedback.classList.add('error-border');
+            feedbackError.style.display = 'block';
+            isValid = false;
+        } else {
+            feedback.classList.remove('error-border');
+            feedbackError.style.display = 'none';
+        }
+        
+        if (!isValid) {
+            return;
+        }
+        
+        // Show thank you or apology message based on rating
+        if (currentRating >= 3) {
+            alert(`شكراً لك على تقييمك الإيجابي للمعلمة ${teacherName}! 😊`);
+        } else {
+            alert(`نأسف أن تجربتك مع ${teacherName} لم تكن مرضية. سنعمل على تحسين أنفسنا. 🙏`);
+        }
+        
+        // Store last evaluated teacher
+        localStorage.setItem('lastEvaluatedTeacher', teacherName);
+        
+        // Redirect to dashboard
+        window.location.href = 'MurabaiPage.html';
+    });
+</script>
+
+</body>
+</html>

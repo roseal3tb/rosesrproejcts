@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مربع · مقدمة في البرمجة ١</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .lesson-container { max-width: 800px; margin: 0 auto; }
+        .lesson-image { width: 100%; height: 300px; object-fit: cover; border-radius: 20px; margin-bottom: 30px; }
+        .info-box { background: #eaf3fd; padding: 25px; border-radius: 20px; margin-bottom: 30px; }
+        .nested-list { background: white; padding: 20px; border-radius: 15px; margin: 20px 0; }
+        .nested-list ul { padding-right: 20px; }
+        .nested-list li { margin: 10px 0; }
+        .nav-buttons { display: flex; justify-content: space-between; margin: 40px 0; }
+        .nav-btn { padding: 12px 30px; background: #f3b33d; border: none; border-radius: 25px; font-weight: bold; cursor: pointer; text-decoration: none; color: #000; }
+        .nav-btn:hover { background: #e0a02d; }
+        table { width: 100%; border-collapse: collapse; margin: 30px 0; background: white; border-radius: 15px; overflow: hidden; }
+        th { background: #0a2647; color: white; padding: 12px; }
+        td { padding: 10px; border-bottom: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+<div class="page-prototype">
+    <!-- الهيدر -->
+    <div class="navbar">
+        <div class="nav-right">
+            <a href="HomePage.HTML"><img src="images/right-logo.png" alt="مربع" class="header-logo-right"></a>
+            <a href="HomePage.HTML">الرئيسية</a>
+            <a href="CoursePage.HTML">المجتمعات</a>
+            <a href="MurabaiPage.html">مربعي</a>
+            <a href="AboutUsPage.HTML">من نحن</a>
+            <a href="ContactUsPage.HTML">تواصل معنا</a>
+        </div>
+        <div class="nav-left"><img src="images/left-logo.png" alt="Logo" class="header-logo-left"></div>
+    </div>
+
+    <div class="content">
+        <!-- Breadcrumbs -->
+        <div style="font-size:0.9rem; color:gray; margin-bottom:20px;">
+            <a href="HomePage.HTML" style="color:gray;">الرئيسية</a> &gt;
+            <a href="CoursePage.HTML" style="color:gray;">المجتمعات</a> &gt;
+            <a href="CoursePage.HTML?community=tech" style="color:gray;">المجتمع التقني</a> &gt;
+            <span>مقدمة في البرمجة ١</span>
+        </div>
+
+        <div class="lesson-container">
+            <h1 style="font-size:2.5rem;">مقدمة في البرمجة - الجزء الأول</h1>
+            <img src="images/lesson1.PNG" alt="درس البرمجة" class="lesson-image">
+
+            <div class="info-box">
+                <h2 style="color:#0a2647;">عن الدرس</h2>
+                <p>في هذا الجزء سنتعرف على أساسيات البرمجة ومفاهيمها الأساسية.</p>
+            </div>
+
+            <h2>مفاهيم أساسية</h2>
+            <table>
+                <tr><th>المفهوم</th><th>الشرح</th><th>مثال</th></tr>
+                <tr><td>المتغيرات</td><td>مكان لتخزين البيانات</td><td>x = 5</td></tr>
+                <tr><td>الدوال</td><td>مجموعة أوامر تؤدي مهمة محددة</td><td>print()</td></tr>
+                <tr><td>الشروط</td><td>اتخاذ قرارات بناء على شروط</td><td>if, else</td></tr>
+            </table>
+
+            <div class="nested-list">
+                <h3>أساسيات لغة Java</h3>
+                <ul>
+                        <li>لغة Java
+                        <ul>
+                            <li>المستوى الأساسي
+                                <ul><li>كتابة الأساسيات</li><li>المتغيرات وأنواع البيانات</li><li>الطباعة والإدخال
+                                </li></ul>
+                            </li>
+                            <li>المستوى المتقدم
+                                <ul><li>الشروط والتحكم</li><li>التكرار -Loops-s</li></ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="CoursePage.HTML" class="nav-btn">السابق</a>
+                <a href="Lesson1Page2.html" class="nav-btn">التالي ←</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <div class="custom-footer">
+        <div class="footer-col">
+    <h4>حساباتنا</h4>
+    <ul class="bullet-list social-links">
+        <li><img src="images/snapchat.PNG"> murabba3</li>
+        <li><img src="images/x.PNG"> murabba3</li>
+        <li><img src="images/instagram.JPG"> murabba3</li>
+    </ul>
+</div>
+        <div class="logo-placeholder">
+            <img src="images/footer.png">
+        </div>
+        <div class="footer-col">
+            <h4>تواصل معنا</h4>
+            <ul class="bullet-list">
+                <li>📧 info@murabba3.com</li>
+                <li>📞 +966 50 123 4567</li>
+                <li>📍 الرياض، السعودية</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">Copyright © 2026 مربع. جميع الحقوق محفوظة</div>
+</div>
+</body>
+</html>

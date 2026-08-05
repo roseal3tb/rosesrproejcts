@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مربع · مربعي</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dashboard-cards {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        .teacher-card {
+            width: 200px;
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+        .teacher-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .teacher-card div {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .scores-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .scores-table th {
+            background: #0a2647;
+            color: white;
+            padding: 15px;
+        }
+        .scores-table td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        .scores-table tr:last-child td {
+            border-bottom: none;
+        }
+        .score-badge {
+            background: #f3b33d;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .none-badge {
+            background: #ddd;
+            padding: 5px 15px;
+            border-radius: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<div class="page-prototype">
+
+    <!-- الهيدر -->
+    <div class="navbar">
+        <div class="nav-right">
+            <a href="HomePage.HTML">
+                <img src="images/right-logo.png" alt="مربع" class="header-logo-right">
+            </a>
+            <a href="HomePage.HTML">الرئيسية</a>
+            <a href="CoursePage.HTML">المجتمعات</a>
+            <a href="MurabaiPage.html">مربعي</a>
+            <a href="AboutUsPage.HTML">من نحن</a>
+            <a href="ContactUsPage.HTML">تواصل معنا</a>
+        </div>
+        <div class="nav-left">
+            <img src="images/left-logo.png" alt="Logo" class="header-logo-left">
+        </div>
+    </div>
+
+    <!-- المحتوى -->
+    <div class="content">
+        <!-- Breadcrumbs -->
+        <div style="font-size:0.9rem; color:gray; margin-bottom:20px;">
+            <a href="HomePage.HTML" style="text-decoration:none; color:gray;">الرئيسية</a> &gt;
+            <span>مربعي</span>
+        </div>
+
+        <h1 style="font-size:2.5rem;">مربعي</h1>
+
+        <!-- روابط سريعة -->
+        <div class="dashboard-cards">
+            <!-- رابط ملاحظاتي -->
+            <a href="MyNotesPage.HTML" class="teacher-card">
+                <div>📝</div>
+                <h4>ملاحظاتي</h4>
+            </a>
+
+            <!-- رابط تقييم المعلمين -->
+            <a href="TeacherEvaluationPage.HTML" class="teacher-card">
+                <div>⭐</div>
+                <h4>تقييم المعلمين</h4>
+            </a>
+
+            <!-- رابط نتائجي (مضاف) -->
+            <a href="MyResultsPage.html" class="teacher-card">
+                <div>📊</div>
+                <h4>نتائجي</h4>
+            </a>
+        </div>
+
+        <!-- ملخص سريع للنتائج -->
+        <div style="background: #eaf3fd; padding: 20px; border-radius: 20px; margin: 30px 0;">
+            <h3 style="color: #0a2647; margin-bottom: 15px;">آخر نتائجك</h3>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 200px;">
+                    <span style="color: #666;">الدروس المكتملة:</span>
+                    <span id="completedCount" style="font-weight: bold; margin-right: 10px;">0</span>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <span style="color: #666;">المعدل العام:</span>
+                    <span id="averageScore" style="font-weight: bold; margin-right: 10px;">0%</span>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <span style="color: #666;">أفضل نتيجة:</span>
+                    <span id="bestScore" style="font-weight: bold; margin-right: 10px;">0</span>
+                </div>
+            </div>
+            <div style="margin-top: 20px;">
+                <a href="MyResultsPage.html" style="color: #f3b33d; font-weight: bold;">عرض كل النتائج ←</a>
+            </div>
+        </div>
+
+        <!-- جدول النتائج الديناميكي -->
+        <h3 style="margin: 30px 0 20px;">نتائج اختباراتي</h3>
+        <div id="scoresContainer">
+            <!-- سيتم عرض الجدول هنا ديناميكياً من localStorage -->
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <div class="custom-footer">
+        <div class="footer-col">
+            <h4>حساباتنا</h4>
+            <ul class="bullet-list social-links">
+                <li><img src="images/snapchat.PNG"> murabba3</li>
+                <li><img src="images/x.PNG"> murabba3</li>
+                <li><img src="images/instagram.JPG"> murabba3</li>
+            </ul>
+        </div>
+        <div class="logo-placeholder">
+            <img src="images/footer.png">
+        </div>
+        <div class="footer-col">
+            <h4>تواصل معنا</h4>
+            <ul class="bullet-list">
+                <li>📧 info@murabba3.com</li>
+                <li>📞 +966 50 123 4567</li>
+                <li>📍 الرياض، السعودية</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        Copyright © 2026 مربع. جميع الحقوق محفوظة
+    </div>
+
+</div>
+
+<script>
+    // List of all possible lessons
+    const allLessons = [
+        'مقدمة في البرمجة باستخدام Java',
+        'ريادة الأعمال',
+        'أساسيات الشعر العربي',
+        'أصول الفقه',
+        'تطوير التطبيقات',
+        'التفسير الموضوعي'
+    ];
+
+    // Get all scores from localStorage
+    function getAllScores() {
+        const scores = [];
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key && key.startsWith('bestScore_')) {
+                const lessonName = key.replace('bestScore_', '');
+                const score = parseFloat(localStorage.getItem(key));
+                scores.push({ lesson: lessonName, score: score });
+            }
+        }
+        return scores;
+    }
+
+    // Render dynamic table
+    function renderScoresTable() {
+        const scores = getAllScores();
+        const container = document.getElementById('scoresContainer');
+        
+        // Update summary stats
+        const completedCount = scores.length;
+        document.getElementById('completedCount').innerText = `${completedCount} من ${allLessons.length}`;
+        
+        if (completedCount > 0) {
+            const totalScore = scores.reduce((sum, s) => sum + s.score, 0);
+            const average = totalScore / completedCount;
+            const best = Math.max(...scores.map(s => s.score));
+            document.getElementById('averageScore').innerText = Math.round(average) + '%';
+            document.getElementById('bestScore').innerText = Math.round(best);
+        } else {
+            document.getElementById('averageScore').innerText = '0%';
+            document.getElementById('bestScore').innerText = '0';
+        }
+        
+        // If no scores, show message and don't display table
+        if (scores.length === 0) {
+            container.innerHTML = '<div style="text-align: center; padding: 40px; background: #f9f9f9; border-radius: 20px; color: #666;">لم تقم بأي اختبار بعد. ابدأ رحلة التعلم الآن!</div>';
+            return;
+        }
+        
+        // Create table
+        let tableHTML = `
+            <table class="scores-table">
+                <thead>
+                    <tr>
+                        <th>الدرس</th>
+                        <th>الدرجة</th>
+                        <th>النسبة</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+        
+        scores.forEach(score => {
+            const percentage = Math.round(score.score);
+            tableHTML += `
+                <tr>
+                    <td>${escapeHtml(score.lesson)}</td>
+                    <td><span class="score-badge">${percentage}</span></td>
+                    <td>${percentage}%</td>
+                </tr>
+            `;
+        });
+        
+        // Add lessons that haven't been taken yet
+        const takenLessons = scores.map(s => s.lesson);
+        const notTaken = allLessons.filter(lesson => !takenLessons.includes(lesson));
+        
+        notTaken.forEach(lesson => {
+            tableHTML += `
+                <tr>
+                    <td>${escapeHtml(lesson)}</td>
+                    <td><span class="none-badge">لم يختبر بعد</span></td>
+                    <td>--</td>
+                </tr>
+            `;
+        });
+        
+        tableHTML += `
+                </tbody>
+            </table>
+        `;
+        
+        container.innerHTML = tableHTML;
+    }
+    
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+    
+    // Render on page load
+    renderScoresTable();
+</script>
+
+</body>
+</html>

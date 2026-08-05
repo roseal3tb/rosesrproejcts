@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مربع · الكتابة الإبداعية</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .lesson-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #f9f9f9;
+            padding: 35px;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .teacher-name {
+            font-size: 1.5rem;
+            color: #0a2647;
+            border-bottom: 2px solid #f3b33d;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .description-box, .objectives-box {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+        }
+        .objectives-list {
+            list-style-type: square;
+            padding-right: 25px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .start-btn {
+            background: #f3b33d;
+            color: #000;
+            border: none;
+            padding: 14px 40px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .back-btn {
+            background: #eaf3fd;
+            color: #0a2647;
+            border: 1px solid #0a2647;
+            padding: 14px 40px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .breadcrumbs a {
+            color: gray;
+            text-decoration: none;
+        }
+        .breadcrumbs span {
+            color: #0a2647;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="page-prototype">
+
+    <!-- الهيدر -->
+    <div class="navbar">
+        <div class="nav-right">
+            <a href="HomePage.HTML"><img src="images/right-logo.png" alt="مربع" class="header-logo-right"></a>
+            <a href="HomePage.HTML">الرئيسية</a>
+            <a href="CoursePage.HTML">المجتمعات</a>
+            <a href="MurabaiPage.html">مربعي</a>
+            <a href="AboutUsPage.HTML">من نحن</a>
+            <a href="ContactUsPage.HTML">تواصل معنا</a>
+        </div>
+        <div class="nav-left"><img src="images/left-logo.png" alt="Logo" class="header-logo-left"></div>
+    </div>
+
+    <!-- المحتوى -->
+    <div class="content">
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs" style="font-size:0.9rem; color:gray; margin-bottom:20px;">
+            <a href="HomePage.HTML">الرئيسية</a> &gt;
+            <a href="CoursePage.HTML">المجتمعات</a> &gt;
+            <a href="CoursePage.HTML?community=writing">المجتمع الكتابي</a> &gt;
+            <span>الكتابة الإبداعية</span>
+        </div>
+
+        <div class="lesson-container">
+            <h1 style="font-size:2.5rem; margin-bottom:10px;">أساسيات الشعر العربي</h1>
+
+            <!-- اسم المعلم -->
+            <div class="teacher-name">
+                د. غازي القصيبي
+            </div>
+
+            <!-- الوصف -->
+            <div class="description-box">
+                <h3 style="color:#0a2647;">الوصف:</h3>
+                <p style="font-size:1.1rem; line-height:1.7;">
+                    يهدف الدرس إلى تطوير مهارات الكتابة الأدبية والإبداعية لدى الطالب.
+                </p>
+            </div>
+
+            <!-- المخرجات -->
+            <div class="objectives-box">
+                <h3 style="color:#0a2647;">المخرجات:</h3>
+                <ul class="objectives-list">
+                    <li>بناء شخصيات وحبكة درامية</li>
+                    <li>كتابة قصة قصيرة متكاملة</li>
+                    <li>تحرير ومراجعة النصوص</li>
+                </ul>
+            </div>
+
+            <!-- الأزرار -->
+             <div class="action-buttons">
+                <a href="CoursePage.HTML" class="back-btn">← العودة للمجتمعات</a>
+                <a href="Lesson3Page1.html" class="start-btn">ابدأ الدرس ←</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <div class="custom-footer">
+      <div class="footer-col">
+    <h4>حساباتنا</h4>
+    <ul class="bullet-list social-links">
+        <li><img src="images/snapchat.PNG"> murabba3</li>
+        <li><img src="images/x.PNG"> murabba3</li>
+        <li><img src="images/instagram.JPG"> murabba3</li>
+    </ul>
+</div>
+        <div class="logo-placeholder">
+            <img src="images/footer.png">
+        </div>
+        <div class="footer-col">
+            <h4>تواصل معنا</h4>
+            <ul class="bullet-list">
+                <li>📧 info@murabba3.com</li>
+                <li>📞 +966 50 123 4567</li>
+                <li>📍 الرياض، السعودية</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        Copyright © 2026 مربع. جميع الحقوق محفوظة
+    </div>
+
+</div>
+</body>
+</html>

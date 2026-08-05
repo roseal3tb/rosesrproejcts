@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مربع · من نحن</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .teachers-scroll {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 20px 0;
+            justify-content: center;
+        }
+        .teacher-card {
+            width: 250px;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .teacher-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .sort-container {
+            margin: 30px 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px;
+        }
+        .sort-container select {
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            background: white;
+            font-size: 1rem;
+        }
+        .badge {
+            background: #eaf3fd;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .about-section {
+            margin-bottom: 50px;
+        }
+        .about-text p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-prototype">
+
+    <!-- الهيدر مطابق للهوم بيج -->
+    <div class="navbar">
+        <div class="nav-right">
+            <a href="HomePage.HTML">
+                <img src="images/right-logo.png" alt="مربع" class="header-logo-right">
+            </a>
+            <a href="HomePage.HTML">الرئيسية</a>
+            <a href="CoursePage.HTML">المجتمعات</a>
+            <a href="MurabaiPage.html">مربعي</a>
+            <a href="AboutUsPage.HTML">من نحن</a>
+            <a href="ContactUsPage.HTML">تواصل معنا</a>
+        </div>
+        <div class="nav-left">
+            <img src="images/left-logo.png" alt="Logo" class="header-logo-left">
+        </div>
+    </div>
+
+    <!-- المحتوى -->
+    <div class="content">
+        <div class="breadcrumb" style="font-size:0.9rem; color:gray; margin-bottom:20px;">
+            <a href="HomePage.HTML" style="text-decoration:none; color:gray;">الرئيسية</a> &gt;
+            <span>من نحن</span>
+        </div>
+
+        <section class="about-section">
+            <h1 style="font-size:2.5rem; margin-bottom:10px;">عـــن مُربَّـع :</h1>
+            <div style="width: 100%; height: 2px; background-color: #333; margin-bottom: 20px;"></div>
+            <div class="about-text" style="line-height: 1.8; font-size: 1.1rem; color: #444;">
+                <p><strong>مُربَّـع</strong> منصة تعليمية متكاملة تغطي أربعة أركان رئيسية: التقنية كأداة للابتكار، الريادة لإعادة تعريف الإدارة وممارستها، الدين كأساس لسعي الإنسان في الحياة، والكتابة لتعزيز الاعتزاز بالهوية العربية، بقيادة معلمين استثنائيين يجمعون بين الخبرة العميقة والبصيرة الواسعة، لتقديم معرفة دقيقة وعملية تُحوِّل كل فكرة إلى أثــر حقيقـي في المجتمع.</p>
+                <p><strong>رؤيتنــا</strong> في مربع هي تمكين الشباب السعودي من الوصول إلى محتوى تعليمي عالي الجودة.</p>
+            </div>
+        </section>
+
+        <h1 style="font-size:2.5rem; margin-bottom:20px;">معلمينا</h1>
+
+        <div class="sort-container">
+            <label for="sort">ترتيب حسب:</label>
+            <select id="sort">
+                <option value="default">-- اختر --</option>
+                <option value="name-asc">الاسم (أ - ي)</option>
+                <option value="name-desc">الاسم (ي - أ)</option>
+                <option value="exp-asc">الأقل خبرة</option>
+                <option value="exp-desc">الأكثر خبرة</option>
+            </select>
+        </div>
+
+        <div class="teachers-scroll" id="teachersContainer">
+            <!-- المعلم 1: تقني -->
+            <div class="teacher-card" data-name="نورة بن سعيد" data-exp="18">
+                <img src="images/teacher1.PNG" alt="أ.د نورة بن سعيد">
+                <h3>أ.د نورة بن سعيد</h3>
+                <p>خبرة 18 سنة</p>
+                <span class="badge">المجتمع التقني</span>
+            </div>
+
+            <!-- المعلم 2: كتابي -->
+            <div class="teacher-card" data-name="غازي القصيبي" data-exp="30">
+                <img src="images/teacher2.PNG" alt="د. غازي القصيبي">
+                <h3>د. غازي القصيبي</h3>
+                <p>خبرة 30+ سنة</p>
+                <span class="badge">المجتمع الكتابي</span>
+            </div>
+
+            <!-- المعلم 3: ريادي -->
+            <div class="teacher-card" data-name="ابتسام العبدالقادر" data-exp="20">
+                <img src="images/teacher1.PNG" alt="أ.د ابتسام العبدالقادر">
+                <h3>أ.د ابتسام العبدالقادر</h3>
+                <p>خبرة 20 سنة</p>
+                <span class="badge">المجتمع الريادي</span>
+            </div>
+
+            <!-- المعلم 4: ديني -->
+            <div class="teacher-card" data-name="محمد بن عثيمين" data-exp="40">
+                <img src="images/teacher2.PNG" alt="العلّامة محمد بن عثيمين">
+                <h3>العلّامة محمد بن عثيمين</h3>
+                <p>خبرة 40+ سنة</p>
+                <span class="badge">المجتمع الديني</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر مطابق للهوم بيج -->
+    <div class="custom-footer">
+        <div class="footer-col">
+            <h4>حساباتنا</h4>
+            <ul class="bullet-list social-links">
+                <li><img src="images/snapchat.PNG"> murabba3</li>
+                <li><img src="images/x.PNG"> murabba3</li>
+                <li><img src="images/instagram.JPG"> murabba3</li>
+            </ul>
+        </div>
+        <div class="logo-placeholder">
+            <img src="images/footer.png">
+        </div>
+        <div class="footer-col">
+            <h4>تواصل معنا</h4>
+            <ul class="bullet-list">
+                <li>📧 info@murabba3.com</li>
+                <li>📞 +966 50 123 4567</li>
+                <li>📍 الرياض، السعودية</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        Copyright © 2026 مربع. جميع الحقوق محفوظة
+    </div>
+
+</div>
+
+<script>
+    // دالة الترتيب
+    document.getElementById('sort').addEventListener('change', function() {
+        const container = document.getElementById('teachersContainer');
+        const cards = Array.from(container.getElementsByClassName('teacher-card'));
+        const sortValue = this.value;
+        
+        cards.sort(function(a, b) {
+            if (sortValue === 'name-asc') {
+                return a.dataset.name.localeCompare(b.dataset.name, 'ar');
+            } else if (sortValue === 'name-desc') {
+                return b.dataset.name.localeCompare(a.dataset.name, 'ar');
+            } else if (sortValue === 'exp-asc') {
+                return parseInt(a.dataset.exp) - parseInt(b.dataset.exp);
+            } else if (sortValue === 'exp-desc') {
+                return parseInt(b.dataset.exp) - parseInt(a.dataset.exp);
+            } else {
+                return 0;
+            }
+        });
+        
+        // إعادة ترتيب العناصر
+        cards.forEach(card => container.appendChild(card));
+    });
+</script>
+
+</body>
+</html>

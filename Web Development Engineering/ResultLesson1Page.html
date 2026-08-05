@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مربع · نتيجة الاختبار</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .content {
+            min-height: 500px;
+            padding: 40px 50px;
+            background-color: #f9f9f9;
+        }
+
+        .result-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #eaf3fd;
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .score-circle {
+            width: 150px;
+            height: 150px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .score-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #0a2647;
+        }
+
+        .best-score {
+            margin: 20px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #f3b33d;
+            color: #000;
+        }
+
+        .btn-secondary {
+            background: #0a2647;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0a2647;
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: gray;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            color: gray;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            .result-container {
+                padding: 25px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-prototype">
+
+    <!-- الهيدر مطابق للهوم بيج -->
+    <div class="navbar">
+        <div class="nav-right">
+            <a href="HomePage.HTML">
+                <img src="images/right-logo.png" alt="مربع" class="header-logo-right">
+            </a>
+            <a href="HomePage.HTML">الرئيسية</a>
+            <a href="CoursePage.HTML">المجتمعات</a>
+            <a href="MurabaiPage.html">مربعي</a>
+            <a href="AboutUsPage.HTML">من نحن</a>
+            <a href="ContactUsPage.HTML">تواصل معنا</a>
+        </div>
+        <div class="nav-left">
+            <img src="images/left-logo.png" alt="Logo" class="header-logo-left">
+        </div>
+    </div>
+
+    <!-- المحتوى -->
+    <div class="content">
+        <div class="breadcrumb">
+            <a href="HomePage.HTML">الرئيسية</a> &gt; 
+            <a href="CoursePage.HTML">المجتمعات</a> &gt; 
+            <span>النتيجة</span>
+        </div>
+
+        <h1>نتيجة الاختبار</h1>
+
+        <div class="result-container">
+            <div class="score-circle">
+                <div class="score-number">0%</div>
+            </div>
+            
+            <div class="best-score">
+                <span>أفضل نتيجة سابقة:</span>
+                <strong>0%</strong>
+            </div>
+            
+            <div class="buttons">
+                <a href="Quizlesson1page.html" class="btn btn-primary">إعادة الاختبار</a>
+                <a href="CoursePage.HTML" class="btn btn-secondary">العودة للدروس</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر مطابق للهوم بيج -->
+    <div class="custom-footer">
+        <div class="footer-col">
+            <h4>حساباتنا</h4>
+            <ul class="bullet-list social-links">
+                <li><img src="images/snapchat.PNG"> murabba3</li>
+                <li><img src="images/x.PNG"> murabba3</li>
+                <li><img src="images/instagram.JPG"> murabba3</li>
+            </ul>
+        </div>
+        <div class="logo-placeholder">
+            <img src="images/footer.png">
+        </div>
+        <div class="footer-col">
+            <h4>تواصل معنا</h4>
+            <ul class="bullet-list">
+                <li>📧 info@murabba3.com</li>
+                <li>📞 +966 50 123 4567</li>
+                <li>📍 الرياض، السعودية</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        Copyright © 2026 مربع. جميع الحقوق محفوظة
+    </div>
+
+</div>
+
+</body>
+</html>

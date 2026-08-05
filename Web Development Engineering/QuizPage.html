@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>مربع · اختبار الدرس</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    .quiz-container {
+        max-width: 700px;
+        margin: 0 auto;
+        background: #eaf3fd;
+        padding: 2.5rem;
+        border-radius: 2rem;
+    }
+    .question {
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+    }
+    .question h3 {
+        margin-bottom: 15px;
+        color: #0a2647;
+    }
+    .option {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .option input {
+        width: 18px;
+        height: 18px;
+    }
+    .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    .nav-btn, .finish-btn {
+        padding: 12px 30px;
+        background: #f3b33d;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+    }
+    .finish-btn {
+        background: #0a2647;
+        color: white;
+    }
+</style>
+</head>
+<body>
+<div class="page-prototype">
+
+<div class="navbar">
+<div class="nav-right">
+<a href="HomePage.HTML"><img src="images/right-logo.png" alt="مربع" class="header-logo-right"></a>
+<a href="HomePage.HTML">الرئيسية</a>
+<a href="CoursePage.HTML">المجتمعات</a>
+<a href="MurabaiPage.html">مربعي</a>
+<a href="AboutUsPage.HTML">من نحن</a>
+<a href="ContactUsPage.HTML">تواصل معنا</a>
+</div>
+<div class="nav-left"><img src="images/left-logo.png" alt="Logo" class="header-logo-left"></div>
+</div>
+
+<div class="content">
+<div style="font-size:0.9rem; color:gray; margin-bottom:10px;">
+<a href="HomePage.HTML" style="text-decoration:none; color:gray;">الرئيسية</a> &gt;
+<a href="CoursePage.HTML" style="text-decoration:none; color:gray;">المجتمعات</a> &gt;
+<span>اختبار الدرس</span>
+</div>
+
+<h1 style="font-size:2.5rem;">اختبار درس أساسيات البرمجة بلغة Java</h1>
+
+<div class="quiz-container">
+    <form id="quizForm">
+        <div class="question">
+            <h3>1. ما هي البرمجة؟</h3>
+            <div class="option"><input type="radio" name="q1" value="a"> أ) عملية كتابة الأكواد لتوجيه الكمبيوتر</div>
+            <div class="option"><input type="radio" name="q1" value="b"> ب) تصميم واجهات المستخدم</div>
+            <div class="option"><input type="radio" name="q1" value="c"> ج) إدارة قواعد البيانات</div>
+            <div class="option"><input type="radio" name="q1" value="d"> د) تشغيل البرامج الجاهزة</div>
+        </div>
+
+        <div class="question">
+            <h3>2. أي من التالي يعتبر لغة برمجة؟</h3>
+            <div class="option"><input type="radio" name="q2" value="a"> أ) HTML</div>
+            <div class="option"><input type="radio" name="q2" value="b"> ب) CSS</div>
+            <div class="option"><input type="radio" name="q2" value="c"> ج) Python</div>
+            <div class="option"><input type="radio" name="q2" value="d"> د) HTTP</div>
+        </div>
+
+        <div class="question">
+            <h3>3. ما هو المتغير في البرمجة؟</h3>
+            <div class="option"><input type="radio" name="q3" value="a"> أ) دالة تقوم بعملية حسابية</div>
+            <div class="option"><input type="radio" name="q3" value="b"> ب) مكان لتخزين البيانات</div>
+            <div class="option"><input type="radio" name="q3" value="c"> ج) حلقة تكرارية</div>
+            <div class="option"><input type="radio" name="q3" value="d"> د) شرط للتحكم بالتدفق</div>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="Lesson1Page.html" class="nav-btn">← السابق</a>
+            <button type="button" id="submitQuiz" class="finish-btn">إنهاء الاختبار →</button>
+        </div>
+    </form>
+</div>
+
+</div>
+
+<div class="custom-footer">
+       <div class="footer-col">
+    <h4>حساباتنا</h4>
+    <ul class="bullet-list social-links">
+        <li><img src="images/snapchat.PNG"> murabba3</li>
+        <li><img src="images/x.PNG"> murabba3</li>
+        <li><img src="images/instagram.JPG"> murabba3</li>
+    </ul>
+</div>
+        <div class="logo-placeholder">
+            <img src="images/footer.png">
+        </div>
+        <div class="footer-col">
+            <h4>تواصل معنا</h4>
+            <ul class="bullet-list">
+                <li>📧 info@murabba3.com</li>
+                <li>📞 +966 50 123 4567</li>
+                <li>📍 الرياض، السعودية</li>
+            </ul>
+        </div>
+    </div>
+<div class="copyright">Copyright © 2026 مربع. جميع الحقوق محفوظة</div>
+
+</div>
+
+<script>
+    // Correct answers for this quiz
+    const correctAnswers = {
+        q1: 'a',
+        q2: 'c',
+        q3: 'b'
+    };
+
+    const submitBtn = document.getElementById('submitQuiz');
+    const lessonName = 'أساسيات البرمجة بلغة Java (مبسط)';
+
+    submitBtn.addEventListener('click', function() {
+        // Check if all questions are answered
+        let allAnswered = true;
+        for (let i = 1; i <= 3; i++) {
+            const radios = document.getElementsByName(`q${i}`);
+            let isAnswered = false;
+            for (let j = 0; j < radios.length; j++) {
+                if (radios[j].checked) {
+                    isAnswered = true;
+                    break;
+                }
+            }
+            if (!isAnswered) {
+                allAnswered = false;
+                break;
+            }
+        }
+
+        if (!allAnswered) {
+            alert('الرجاء الإجابة على جميع الأسئلة قبل إنهاء الاختبار');
+            return;
+        }
+
+        // Calculate score
+        let score = 0;
+        for (let i = 1; i <= 3; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selected && selected.value === correctAnswers[`q${i}`]) {
+                score++;
+            }
+        }
+
+        const total = 3;
+        const percentage = (score / total) * 100;
+
+        // Store in localStorage as best score for this lesson
+        const storageKey = `bestScore_${lessonName}`;
+        let bestScore = localStorage.getItem(storageKey);
+        
+        if (bestScore === null) {
+            localStorage.setItem(storageKey, percentage);
+        } else if (percentage > parseFloat(bestScore)) {
+            localStorage.setItem(storageKey, percentage);
+        }
+
+        // Redirect to results page with score and lesson name
+        window.location.href = `MyResultsPage.html?score=${percentage}&lesson=${encodeURIComponent(lessonName)}`;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>مربع · ملاحظة جديدة</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    .priority-select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
+    .save-btn {
+        background: #0a2647;
+        color: white;
+        padding: 12px 40px;
+        border-radius: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        display: inline-block;
+        text-decoration: none;
+    }
+    .save-btn:hover {
+        background: #1a3a5f;
+    }
+    .error-message {
+        color: #dc3545;
+        font-size: 0.85rem;
+        margin-top: 5px;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="page-prototype">
+
+<div class="navbar">
+<div class="nav-right">
+<a href="HomePage.HTML">
+<img src="images/right-logo.png" alt="مربع" class="header-logo-right">
+</a>
+<a href="HomePage.HTML">الرئيسية</a>
+<a href="CoursePage.HTML">المجتمعات</a>
+<a href="MurabaiPage.html">مربعي</a>
+<a href="AboutUsPage.HTML">من نحن</a>
+<a href="ContactUsPage.HTML">تواصل معنا</a>
+</div>
+<div class="nav-left">
+<img src="images/left-logo.png" alt="Logo" class="header-logo-left">
+</div>
+</div>
+
+<div class="content">
+
+<div style="font-size:0.9rem; color:gray; margin-bottom:10px;">
+  <a href="HomePage.HTML" style="text-decoration:none; color:gray;">الرئيسية</a> &gt; 
+  <a href="MurabaiPage.html" style="text-decoration:none; color:gray;">مربعي</a> &gt; 
+  <a href="MyNotesPage.HTML" style="text-decoration:none; color:gray;">مربع ملاحظاتي</a> &gt; 
+  <span>ملاحظة جديدة</span>
+</div>
+
+<h1 style="font-size:2.5rem;">مربع ملاحظة جديدة</h1>
+
+<div style="background:#eaf3fd; padding:2rem; border-radius:2rem; max-width:600px; margin-top:1rem;">
+
+<textarea id="noteText" placeholder="أدخل ملاحظتك..." 
+style="width:100%; height:180px; padding:12px; border-radius:15px; border:1px solid #ccc;"></textarea>
+<div id="textError" class="error-message">⚠️ الملاحظة يجب أن تحتوي على 30 حرفاً على الأقل</div>
+
+<br><br>
+
+<label style="display:block; margin-bottom:5px; font-weight:bold;">الأولوية:</label>
+<select id="prioritySelect" class="priority-select">
+    <option value="">-- اختر الأولوية --</option>
+    <option value="1">أولوية 1 (عالية)</option>
+    <option value="2">أولوية 2 (متوسطة)</option>
+    <option value="3">أولوية 3 (منخفضة)</option>
+</select>
+<div id="priorityError" class="error-message">⚠️ الرجاء اختيار الأولوية</div>
+
+<button id="saveNoteBtn" class="save-btn">حفظ</button>
+
+</div>
+
+</div>
+
+<div class="custom-footer">
+       <div class="footer-col">
+    <h4>حساباتنا</h4>
+    <ul class="bullet-list social-links">
+        <li><img src="images/snapchat.PNG"> murabba3</li>
+        <li><img src="images/x.PNG"> murabba3</li>
+        <li><img src="images/instagram.JPG"> murabba3</li>
+    </ul>
+</div>
+        <div class="logo-placeholder">
+            <img src="images/footer.png">
+        </div>
+        <div class="footer-col">
+            <h4>تواصل معنا</h4>
+            <ul class="bullet-list">
+                <li>📧 info@murabba3.com</li>
+                <li>📞 +966 50 123 4567</li>
+                <li>📍 الرياض، السعودية</li>
+            </ul>
+        </div>
+    </div>
+
+<div class="copyright">
+Copyright © 2026 مربع. جميع الحقوق محفوظة
+</div>
+
+</div>
+
+<script>
+    const saveBtn = document.getElementById('saveNoteBtn');
+    const noteText = document.getElementById('noteText');
+    const prioritySelect = document.getElementById('prioritySelect');
+    const textError = document.getElementById('textError');
+    const priorityError = document.getElementById('priorityError');
+
+    function getNotesFromStorage() {
+        const notes = localStorage.getItem('studentNotes');
+        return notes ? JSON.parse(notes) : [];
+    }
+
+    function saveNotesToStorage(notes) {
+        localStorage.setItem('studentNotes', JSON.stringify(notes));
+    }
+
+    function getNextId(notes) {
+        return notes.length > 0 ? Math.max(...notes.map(n => n.id)) + 1 : 1;
+    }
+
+    saveBtn.addEventListener('click', function() {
+        let isValid = true;
+        
+        // Check note description (at least 30 characters)
+        const description = noteText.value.trim();
+        if (description.length < 30) {
+            textError.style.display = 'block';
+            isValid = false;
+        } else {
+            textError.style.display = 'none';
+        }
+        
+        // Check priority selected
+        const priority = prioritySelect.value;
+        if (priority === '') {
+            priorityError.style.display = 'block';
+            isValid = false;
+        } else {
+            priorityError.style.display = 'none';
+        }
+        
+        if (!isValid) {
+            return;
+        }
+        
+        // Create new note object
+        const notes = getNotesFromStorage();
+        const newNote = {
+            id: getNextId(notes),
+            title: description.substring(0, 30) + (description.length > 30 ? '...' : ''),
+            description: description,
+            priority: parseInt(priority),
+            date: new Date().toISOString().split('T')[0],
+            backgroundColor: priority === '1' ? '#ffe5e5' : (priority === '2' ? '#fff3e0' : '#e8f5e9')
+        };
+        
+        notes.push(newNote);
+        saveNotesToStorage(notes);
+        
+        // Clear form
+        noteText.value = '';
+        prioritySelect.value = '';
+        
+        // Redirect to MyNotesPage
+        window.location.href = 'MyNotesPage.HTML';
+    });
+</script>
+
+</body>
+</html>
