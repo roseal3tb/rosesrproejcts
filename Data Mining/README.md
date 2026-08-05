@@ -13,14 +13,17 @@ Machine Learning: scikit-learn
 Data Visualization: matplotlib, seaborn
 # 📊 Workflow & Methodology
 Data Ingestion ➔ Preprocessing & EDA ➔ Model Training (Supervised & Unsupervised) ➔ Evaluation & Visualization
+
 1. Data Preprocessing & EDA
   Cleaned missing, null, or inconsistent records across dataset features.
   Applied feature scaling (StandardScaler / MinMaxScaler) to ensure parity across numerical attributes.
   Performed exploratory data analysis using distribution plots and correlation heatmaps to extract key data insights.
+
 2. Supervised Learning: Decision Tree Classifier
    Split dataset into training and testing subsets ($80/20$ split).
    Trained a Decision Tree Classifier to categorize target health metrics/outcomes.
    Evaluated performance using key metrics: Accuracy, Precision, Recall, F1-Score, and Confusion Matrix.
+
    3. Unsupervised Learning: K-Means Clustering
       Utilized the Elbow Method (Sum of Squared Errors) to determine the optimal number of clusters ($K$).
       Trained a K-Means Model to discover underlying patterns and group similar patient profiles.
