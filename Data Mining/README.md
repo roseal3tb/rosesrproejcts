@@ -24,7 +24,7 @@ Data Ingestion ➔ Preprocessing & EDA ➔ Model Training (Supervised & Unsuperv
    Trained a Decision Tree Classifier to categorize target health metrics/outcomes.
    Evaluated performance using key metrics: Accuracy, Precision, Recall, F1-Score, and Confusion Matrix.
 
-   3. Unsupervised Learning: K-Means Clustering
+3. Unsupervised Learning: K-Means Clustering
       Utilized the Elbow Method (Sum of Squared Errors) to determine the optimal number of clusters ($K$).
       Trained a K-Means Model to discover underlying patterns and group similar patient profiles.
       Visualized cluster separations using 2D feature projection plots.
